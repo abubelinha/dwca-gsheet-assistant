@@ -44,7 +44,7 @@ After the add-on has be installed and enabled for the current user the submenu "
 
 At the top menu "Darwin Core Assistant" click on "Start DwC-Archive" to start the add-on for the current spreadsheet. After the add-on is initiated the options listed above will be shown.
 
-![Start DwC-Archive Assistant](/assets/img/start-dwca-assistant.png)
+![Start DwC-Archive Assistant](./assets/img/start-dwca-assistant.png)
 
 ## Add/Remove Mapping Row
 
@@ -52,24 +52,24 @@ To add or remove a mapping row from a sheet select the option *Add/Remove mappin
 
 **Note:** header rows can only be added to sheet that already has some data, so the size (number of columns) in the sheet can be calculated and the header row will have the same size of data.
 
-![Add/Remove mapping row](/assets/img/mapping-row.png)
+![Add/Remove mapping row](./assets/img/mapping-row.png)
 
 ### The special `CORE_ID` term
 
 The Darwin Core Archive is used to represent complex structures within data (one-to-many relations) by the definition of a **star schema**. For that reason, a special term `CORE_ID` is available on the mapping row list of terms. Using the `CORE_ID` term is possible to "link" or represeting the relations between data in different sheets. Records (i.e. rows) from different sheets can be linked into a one-to-many relation by mapping a column to the `CORE_ID` term in all related sheets. Two or more columns in different sheets which have the `CORE_ID` term by definition of Darwin Core Archive Standard have to be filled same value (see figure bellow as an example).
 
-![The CORE_ID term](/assets/img/core-id-term.png)
+![The CORE_ID term](./assets/img/core-id-term.png)
 *The row in the left sheet with `CORE_ID` `2787` is linked to the two rows of the right sheet, creating a one-to-many relation between sheets. The left sheet after will be selected as the **core sheet** and the right sheet as **extension sheet** in DwC-Archive nomenclature*
 
 ## Ecological Metadata Language Editor
 
 The Ecologial Metadata Language (EML) allows the description of the whole dataset, and so, is recommended to always provided as much details as possible to describe it. Although only the DwC-Archive Standard requires an EML file to be included into the archive, as opposed to Simple Darwin Core, describing the dataset in both scenarios is recommended. 
 
-![EML Editor](/assets/img/eml-editor-1.png)
+![EML Editor](./assets/img/eml-editor-1.png)
 
 The EML Editor required only a few number of fields to be filled (only those required by [Global Biodiveristy Information Facility (GBIF) EML Schema]()). However, it's possible to manually add an EML content in XML format created using an external tool by selecting the checkbox *Manually enter EML content*.
 
-![Manual EML Editor](/assets/img/eml-editor-manual.png)
+![Manual EML Editor](./assets/img/eml-editor-manual.png)
 
 After add the EML metadata click on *Save* button to save.
 
@@ -87,7 +87,7 @@ In that case, the action triggered by clicking the *Generate DwC-Archive* button
 
 **Note**: all sheets with *mapping row* have to include a column mapped to the `CORE_ID` term, so the DwC-Archive can be generated properly.
 
-![Darwin Core Archive](/assets/img/dwca.png)
+![Darwin Core Archive](./assets/img/dwca.png)
 
 # Publishing to Zenodo
 
@@ -99,11 +99,11 @@ The Zenodo publishing action is triggered when the *Generate DwC-Archive* is cli
 
 To get an access token login into your Zenodo account, and under the *Applications* section in your profile create a **New personal access token** and be certified to check appropriated scopes. In order to allow the add-on to publish to your Zenodo account select at least both scopes **deposit:actions** and **deposit:write**. Then click into **Create** button.
 
-![Creating Zenodo personal access token](/assets/img/zenodo.png)
+![Creating Zenodo personal access token](./assets/img/zenodo.png)
 
 Copy the new created token into the *Settings* sidemenu (activated in the add-on submenu) and selected the option **Enable Zenodo Upload**, then click **Save**.
 
-![Setting Zenodo access token](/assets/img/settings.png)
+![Setting Zenodo access token](./assets/img/settings.png)
 
 After that, every time the *Generate DwC-Archive* action is triggered the DwC-Archive will be upload to Zenodo.
 
